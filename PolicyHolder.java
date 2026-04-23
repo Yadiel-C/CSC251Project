@@ -47,4 +47,12 @@ public class PolicyHolder {
       if(height == 0) return 0;
       return(weight * 703) / (height * height);
      }
+     
+     public String toString() {
+      return "First Name: " + firstName +
+      "Last Name: " + lastName +
+      "Age: " + age +
+      "Height: " + height +
+      "Weight" + weight;
     }
+   }
