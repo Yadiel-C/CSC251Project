@@ -64,4 +64,10 @@ public class Policy {
            }
            return price;
           }
+          
+          public String toString() {
+            return "Policy Number: " + policyNum +
+            "Provider Name: " + providerName +
+            holder.toString();
          }
+        }
