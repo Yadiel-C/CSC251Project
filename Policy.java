@@ -2,7 +2,7 @@ public class Policy {
    private int policyNum;
    private String providerName;
    private PolicyHolder holder;
-   
+   private static int policyCount = 0;
    
    /* No-arg constructor that sets all fields to default values */
    public Policy() {
@@ -14,10 +14,11 @@ public class Policy {
      /* Constructor that sets up all the fields with the given arguments */
      /* @param policyNum the policy number */
      /* @param providerName the name of the insurance provider */
-     public Policy(int policyNum, String providerName) {
+     public Policy(int policyNum, String providerName, PolicyHolder holder) {
       this.policyNum = policyNum;
       this.providerName = providerName;
       this.holder = holder;
+      policyCount++;
      }
      
      /* Returns the policy number */
@@ -34,6 +35,10 @@ public class Policy {
      
      public PolicyHolder getHolder() {
       return holder;
+     }
+     
+     public static int getPolicyCount() {
+      return policyCount;
      }
      
      //Setters
