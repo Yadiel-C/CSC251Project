@@ -34,7 +34,8 @@ public class Policy {
      }
      
      public PolicyHolder getHolder() {
-      return holder;
+      return new PolicyHolder(holder.getFirstName(), holder.getLastName(), holder.getAge(), holder.getSmokingStatus(),
+         holder.getHeight(), holder.getWeight());
      }
      
      public static int getPolicyCount() {
@@ -51,7 +52,8 @@ public class Policy {
      }
      
      public void setHolder(PolicyHolder holder) {
-      this.holder = holder;
+      this.holder = new PolicyHolder(holder.getFirstName(), holder.getLastName(), holder.getAge(), holder.getSmokingStatus(),
+         holder.getHeight(), holder.getWeight());
      }
 
      public double calculatePrice() {
@@ -72,7 +74,9 @@ public class Policy {
           
           public String toString() {
             return "Policy Number: " + policyNum +
-            "Provider Name: " + providerName +
-            holder.toString();
+            "\nProvider Name: " + providerName +
+            "\n" + holder.toString() + 
+            "\nPolicyholder's BMI: " + String.format("%.2f", holder.calculateBMI()) + 
+            "\nPolicy Price: $" + String.format("%.2f", calculatePrice());
          }
         }
