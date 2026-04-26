@@ -49,10 +49,10 @@ public class PolicyHolder {
      }
      
      public String toString() {
-      return "First Name: " + firstName +
-      "Last Name: " + lastName +
-      "Age: " + age +
-      "Height: " + height +
-      "Weight" + weight;
+      return "Policyholder's First Name: " + firstName +
+      "\n Policyholder's Last Name: " + lastName +
+      "\n Policyholder's Age: " + age +
+      "\n Policyholder's Height: " + height + " inches" + 
+      "\n Policyholder's Weight " + weight + " pounds";
     }
    }
